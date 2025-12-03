@@ -1,7 +1,6 @@
 {
-  "name": "tecnomax-ecommerce",
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "projeto-web-foundation",
   "compatibility_date": "2025-12-03",
-  "assets": {
-    "directory": "."
-  }
+  "main": "./index.html"
 }
