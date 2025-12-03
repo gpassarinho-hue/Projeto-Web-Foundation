@@ -538,15 +538,46 @@ img {
 }
 
 .rodape__conteudo {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
 }
 
+.rodape__coluna {
+    margin: 0;
+}
+
+.rodape__titulo {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.rodape__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rodape__lista li {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.rodape__lista li:hover {
+    color: #333;
+    cursor: pointer;
+}
+
+/* Coluna de ajuda com elementos extras */
 .rodape__coluna--ajuda {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .rodape__titulo {
