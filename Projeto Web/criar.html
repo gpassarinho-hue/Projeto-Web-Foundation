@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/criar.css">
 </head>
 <body>
+  <!-- BARRA SUPERIOR -->
   <header class="barra-superior">
     <div class="grid-container">
       <div class="grid-x align-middle barra-superior__conteudo">
@@ -15,7 +16,7 @@
           <span class="barra-superior__empresa">TECNOMAX</span>
           <div class="barra-superior__voltar">
             <img src="imagens/setaEsquerda.svg" alt="Seta para voltar" class="icone">
-            <a class="barra-superior__link" href="home.html">Voltar à loja</a>
+            <a class="barra-superior__link" href="#">Voltar à loja</a>
           </div>
         </div>
 
@@ -29,6 +30,7 @@
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL - CRIAR CONTA -->
   <main class="criar-conta">
     <div class="grid-container">
       <div class="grid-x align-center">
@@ -38,7 +40,7 @@
             <p class="criar-conta__subtitulo text-center">Crie sua conta inserindo seu endereço de e-mail e senha.</p>
             
             <form class="criar-conta__formulario">
-
+              <!-- Email -->
               <div class="criar-conta__grupo">
                 <label for="email" class="criar-conta__rotulo">Endereço de e-mail</label>
                 <input 
@@ -50,6 +52,7 @@
                 >
               </div>
               
+              <!-- Senha -->
               <div class="criar-conta__grupo">
                 <label for="senha" class="criar-conta__rotulo">Senha</label>
                 <div class="criar-conta__campo-senha">
@@ -67,6 +70,7 @@
                 </div>
               </div>
               
+              <!-- Confirmar Senha -->
               <div class="criar-conta__grupo">
                 <label for="confirmar-senha" class="criar-conta__rotulo">Confirmar Senha</label>
                 <div class="criar-conta__campo-senha">
@@ -84,6 +88,7 @@
                 </div>
               </div>
               
+              <!-- Checkbox de newsletter -->
               <div class="criar-conta__checkbox">
                 <input type="checkbox" id="newsletter" checked>
                 <label for="newsletter" class="criar-conta__checkbox-texto">
@@ -91,21 +96,26 @@
                 </label>
               </div>
               
+              <!-- Termos e condições -->
               <div class="criar-conta__termos">
                 <p>Ao criar uma conta, você concorda com os <a href="#" class="criar-conta__link">Termos de Serviço</a> e <a href="#" class="criar-conta__link">Política de Privacidade</a>.</p>
               </div>
               
+              <!-- Divisor -->
               <div class="criar-conta__divisor">
                 <span class="criar-conta__divisor-texto">Ou</span>
               </div>
               
+              <!-- Continuar com Google -->
               <button type="button" class="botao botao--google">
                 <img src="imagens/google.svg" alt="Logo do Google" class="criar-conta__google-icone">
                 <span>Continuar com Google</span>
               </button>
               
+              <!-- Botão de criar conta -->
               <button type="submit" class="botao botao--primario criar-conta__botao">Criar Conta</button>
               
+              <!-- Link para login -->
               <p class="criar-conta__login text-center">
                 Já tem uma conta? <a href="login.html" class="criar-conta__login-link">Faça login aqui</a>
               </p>
@@ -116,6 +126,7 @@
     </div>
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="rodape">
     <div class="grid-container">
       <div class="rodape__divisor"></div>

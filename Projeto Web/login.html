@@ -4,10 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - TECNOMAX</title>
+  
+  <!-- Foundation CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+  
+  <!-- Seu estilo customizado -->
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+  <!-- BARRA SUPERIOR -->
   <header class="barra-superior">
     <div class="grid-container">
       <div class="grid-x align-middle barra-superior__conteudo">
@@ -15,7 +20,7 @@
           <span class="barra-superior__empresa">TECNOMAX</span>
           <div class="barra-superior__voltar">
             <img src="imagens/setaEsquerda.svg" alt="Seta para voltar" class="icone">
-            <a class="barra-superior__link" href="home.html">Voltar à loja</a>
+            <a class="barra-superior__link" href="#">Voltar à loja</a>
           </div>
         </div>
 
@@ -29,6 +34,7 @@
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL - LOGIN -->
   <main class="login">
     <div class="grid-container login__container">
       <div class="grid-x align-center">
@@ -38,6 +44,7 @@
             <p class="login__subtitulo">Faça login inserindo seu endereço de e-mail e senha.</p>
             
             <form class="login__formulario">
+              <!-- Email -->
               <div class="login__grupo">
                 <label for="email" class="login__rotulo">Endereço de e-mail</label>
                 <input 
@@ -48,7 +55,8 @@
                   required
                 >
               </div>
-
+              
+              <!-- Senha -->
               <div class="login__grupo">
                 <label for="senha" class="login__rotulo">Senha</label>
                 <div class="login__campo-senha">
@@ -65,6 +73,7 @@
                 </div>
               </div>
               
+              <!-- Lembrar de mim e Esqueci a senha -->
               <div class="login__opcoes">
                 <label class="login__checkbox">
                   <input type="checkbox">
@@ -73,19 +82,23 @@
                 <a href="#" class="login__esqueci-senha">Esqueceu a senha?</a>
               </div>
               
+              <!-- Botão de login -->
               <button type="submit" class="botao botao--primario login__botao">Entrar</button>
               
+              <!-- Divisor -->
               <div class="login__divisor">
                 <span class="login__divisor-texto">Ou</span>
               </div>
               
+              <!-- Login com Google -->
               <button type="button" class="botao botao--google">
                 <img src="imagens/google.svg" alt="Logo do Google" class="login__google-icone">
                 <span>Entrar com Google</span>
               </button>
               
+              <!-- Link para cadastro -->
               <p class="login__cadastro">
-                Não tem uma conta? <a href="criar.html" class="login__cadastro-link">Cadastre-se aqui</a>
+                Não tem uma conta? <a href="criar-conta.html" class="login__cadastro-link">Cadastre-se aqui</a>
               </p>
             </form>
           </div>
@@ -94,6 +107,7 @@
     </div>
   </main>
 
+  <!-- RODAPÉ -->
   <footer class="rodape">
     <div class="grid-container">
       <div class="rodape__divisor"></div>
