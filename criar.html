@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Criar Conta</title>
+  <link rel="stylesheet" href="css/criar.css">
+</head>
+<body>
+  <!-- BARRA SUPERIOR -->
+  <header class="barra-superior">
+    <div class="container">
+      <div class="barra-superior__conteudo">
+        <div class="barra-superior__esquerda">
+          <span class="barra-superior__empresa">TECNOMAX</span>
+          <div class="barra-superior__voltar">
+            <img src="Imagens/setaEsquerda.svg" alt="Seta para voltar" class="icone">
+            <a class="barra-superior__link" href="home.html">Voltar à loja</a>
+          </div>
+        </div>
+
+        <a class="barra-superior__suporte" href="#" aria-label="Atendimento ao cliente">
+          <img src="Imagens/interrogação.svg" alt="Ícone de suporte" class="icone">
+          <span>Atendimento ao Cliente</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL - CRIAR CONTA -->
+  <main class="criar-conta">
+    <div class="criar-conta__container">
+      <div class="criar-conta__bloco">
+        <h1 class="criar-conta__titulo">Criar Sua Conta</h1>
+        <p class="criar-conta__subtitulo">Crie sua conta inserindo seu endereço de e-mail e senha.</p>
+        
+        <form class="criar-conta__formulario">
+          <!-- Email -->
+          <div class="criar-conta__grupo">
+            <label for="email" class="criar-conta__rotulo">Endereço de e-mail</label>
+            <input 
+              type="email" 
+              id="email" 
+              class="criar-conta__entrada" 
+              placeholder="email@exemplo.com"
+              required
+            >
+          </div>
+          
+          <!-- Senha -->
+          <div class="criar-conta__grupo">
+            <label for="senha" class="criar-conta__rotulo">Senha</label>
+            <div class="criar-conta__campo-senha">
+              <input 
+                type="password" 
+                id="senha" 
+                class="criar-conta__entrada" 
+                placeholder="********"
+                required
+                minlength="8"
+              >
+              <button type="button" class="criar-conta__mostrar-senha" aria-label="Mostrar senha">
+                <img src="Imagens/olho.svg" alt="Ícone de olho" class="icone">
+              </button>
+            </div>
+          </div>
+          
+          <!-- Confirmar Senha -->
+          <div class="criar-conta__grupo">
+            <label for="confirmar-senha" class="criar-conta__rotulo">Confirmar Senha</label>
+            <div class="criar-conta__campo-senha">
+              <input 
+                type="password" 
+                id="confirmar-senha" 
+                class="criar-conta__entrada" 
+                placeholder="********"
+                required
+                minlength="8"
+              >
+              <button type="button" class="criar-conta__mostrar-senha" aria-label="Mostrar senha">
+                <img src="Imagens/olho.svg" alt="Ícone de olho" class="icone">
+              </button>
+            </div>
+          </div>
+          
+          <!-- Checkbox de newsletter -->
+          <div class="criar-conta__checkbox">
+            <input type="checkbox" id="newsletter" checked>
+            <label for="newsletter" class="criar-conta__checkbox-texto">
+              Receber notícias, atualizações e ofertas
+            </label>
+          </div>
+          
+          <!-- Termos e condições -->
+          <div class="criar-conta__termos">
+            <p>Ao criar uma conta, você concorda com os <a href="#" class="criar-conta__link">Termos de Serviço</a> e <a href="#" class="criar-conta__link">Política de Privacidade</a>.</p>
+          </div>
+          
+          <!-- Divisor -->
+          <div class="criar-conta__divisor">
+            <span class="criar-conta__divisor-texto">Ou</span>
+          </div>
+          
+          <!-- Continuar com Google -->
+          <button type="button" class="botao botao--google">
+            <img src="Imagens/google.svg" alt="Logo do Google" class="criar-conta__google-icone">
+            <span>Continuar com Google</span>
+          </button>
+          
+          <!-- Botão de criar conta -->
+          <button type="submit" class="botao botao--primario criar-conta__botao">Criar Conta</button>
+          
+          <!-- Link para login -->
+          <p class="criar-conta__login">
+            Já tem uma conta? <a href="login.html" class="criar-conta__login-link">Faça login aqui</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__divisor"></div>
+
+      <div class="rodape__conteudo">
+        <div class="rodape__coluna rodape__coluna--ajuda">
+          <h3 class="rodape__titulo">Precisa de ajuda?</h3>
+          <button class="botao botao--contato">Contato</button>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Atendimento</h3>
+          <ul class="rodape__lista">
+            <li>Devoluções e garantia</li>
+            <li>Pagamentos</li>
+            <li>Frete</li>
+            <li>Termos de serviço</li>
+            <li>Política de privacidade</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Institucional</h3>
+          <ul class="rodape__lista">
+            <li>Sobre nós</li>
+            <li>Marcas</li>
+            <li>Afiliados</li>
+            <li>Investidores</li>
+            <li>Cookies</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Vale-presente</h3>
+          <ul class="rodape__lista">
+            <li>Comprar</li>
+            <li>Resgatar</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna rodape__coluna--localizacao">
+          <div class="seletor-localizacao">
+            <h3 class="rodape__titulo">Localização</h3>
+            <div class="seletor-localizacao__gatilho">
+              <img src="Imagens/Brasil.svg" alt="Bandeira do Brasil" class="bandeira">
+              <span>Brasil</span>
+              <img src="Imagens/setaBandeira.svg" alt="Expandir opções" class="icone">
+            </div>
+          </div>
+        
+          <div class="redes-sociais">
+            <a class="rede-social" href="#"><img src="Imagens/insta.png" alt="Instagram" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_facebook.png" alt="Facebook" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_youtube.png" alt="YouTube" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_Twitter.png" alt="Twitter" class="icone-rede"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+</body>
+</html>

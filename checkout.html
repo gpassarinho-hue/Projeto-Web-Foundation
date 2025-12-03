@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Finalizar compra</title>
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <!-- BARRA SUPERIOR -->
+  <header class="barra-superior">
+    <div class="container">
+      <div class="barra-superior__conteudo">
+        <div class="barra-superior__esquerda">
+          <span class="barra-superior__empresa">TECNOMAX</span>
+          <div class="barra-superior__voltar">
+            <img src="Imagens/setaEsquerda.svg" alt="Seta para voltar" class="icone">
+            <a class="barra-superior__link" href="home.html">Voltar à loja</a>
+          </div>
+        </div>
+
+        <a class="barra-superior__suporte" href="#" aria-label="Atendimento ao cliente">
+          <img src="Imagens/interrogação.svg" alt="Ícone de suporte" class="icone">
+          <span>Atendimento ao Cliente</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- CABEÇALHO DA PÁGINA -->
+  <section class="cabecalho-pagina">
+    <div class="container">
+      <h1 class="cabecalho-pagina__titulo">Finalizar compra</h1>
+      <p class="cabecalho-pagina__subtitulo">Taxas de envio e códigos de desconto aplicados no checkout.</p>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo-principal">
+    <div class="container">
+      <div class="layout">
+
+        <!-- COLUNA PRINCIPAL -->
+        <div class="layout__principal">
+
+          <!-- USUÁRIO -->
+          <div class="cartao-usuario">
+            <div class="cartao-usuario__info">
+              <img src="Imagens/IconeUsuario.png" alt="Usuário" class="cartao-usuario__avatar">
+              <p class="cartao-usuario__nome">Usuário</p>
+            </div>
+            <a class="cartao-usuario__acao" href="#" aria-label="Alterar endereço">
+              <img src="Imagens/lapis.svg" alt="Ícone editar">Alterar endereço
+            </a>
+          </div>
+
+          <!-- INFORMAÇÕES DO CLIENTE -->
+          <div class="cartao informacoes-cliente">
+            <div class="informacoes-cliente__linha">
+              <div class="informacoes-cliente__item">
+                <strong>Email:</strong> fulaninho123@gmail.com
+              </div>
+              <div class="informacoes-cliente__item">
+                <strong>Endereço:</strong> H4******* 22, ***50 U********
+              </div>
+            </div>
+            <div class="informacoes-cliente__divisor">
+              <strong>Telefone:</strong> +1 0*******09
+            </div>
+          </div>
+
+          <!-- DETALHES DE ENVIO -->
+          <h2 class="titulo-secao">Detalhes de Envio</h2>
+          <div class="cartao">
+            <div class="produto">
+              <img src="Imagens/smartphone.avif" alt="smartphone" class="produto__imagem">
+              <div class="produto__detalhes">
+                <div class="produto__cabecalho">
+                  <span class="produto__nome">Smartphone Pro Max</span>
+                  <img src="Imagens/lixeira.svg" alt="Remover produto" class="produto__remover">
+                </div>
+                <div class="produto__descricao">Smartphone premium com tela Super Retina XDR de 6.7", processador A16 Bionic, 256GB de armazenamento e sistema de câmera profissional.</div>
+
+                <div class="produto__controles">
+                  <div>
+                    <label class="sr-only">Quantidade</label>
+                    <input type="number" min="1" value="1" class="entrada entrada--quantidade" aria-label="Quantidade do produto">
+                  </div>
+
+                  <div class="produto__precos">
+                    <span class="preco preco--antigo">R$ 1.199,00</span>
+                    <span class="preco preco--atual">R$ 959,00</span>
+                    <div class="badge badge--economia">Você economiza 20%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- OPÇÕES DE ENVIO -->
+          <h2 class="titulo-secao">Pontos de Envio</h2>
+          <div class="cartao">
+            <div class="opcao-envio opcao-envio--ativa">
+              <div class="opcao-envio__conteudo">
+                <label class="opcao-envio__rotulo">
+                  <input type="radio" name="envio" checked aria-checked="true">
+                  <strong>Entrega em domicílio</strong>
+                </label>
+                <div class="opcao-envio__prazo">Prazo: 3-5 dias úteis</div>
+                <div class="opcao-envio__endereco"><strong>Enviar para:</strong> Mercearia Central, 128 Rua das Acácias, São Paulo
+</div>
+                <a class="opcao-envio__alterar" href="#">Alterar</a>
+              </div>
+              <div class="opcao-envio__preco">R$16,00</div>
+            </div>
+
+            <div class="opcao-envio">
+              <div class="opcao-envio__conteudo">
+                <label class="opcao-envio__rotulo">
+                  <input type="radio" name="envio">
+                  <strong>Ponto de retirada</strong>
+                </label>
+                <div class="opcao-envio__prazo">Prazo: 2-4 dias úteis</div>
+              </div>
+              <div class="opcao-envio__preco">R$36,00</div>
+            </div>
+          </div>
+
+          <!-- PAGAMENTO -->
+          <h2 class="titulo-secao">Pagamento</h2>
+
+          <!-- Cartão -->
+          <div class="metodo-pagamento metodo-pagamento--ativo">
+            <div class="metodo-pagamento__cabecalho">
+              <label class="metodo-pagamento__rotulo">
+                <input type="radio" name="metodo-pagamento" checked>
+                <strong>Cartão de débito / crédito</strong>
+              </label>
+            </div>
+
+            <div class="metodo-pagamento__formulario">
+              <div class="campo-com-icone">
+                <input class="entrada" type="text" placeholder="1234 5678 9012 3456" aria-label="Número do cartão">
+                <img src="Imagens/cartaofrente.svg" alt="" aria-hidden="true" class="campo-com-icone__icone">
+              </div>
+
+              <div class="campos-duplos">
+                <input class="entrada" type="text" placeholder="MM / AA" aria-label="Validade">
+                <input class="entrada" type="text" placeholder="CVC 3 dígitos" aria-label="CVC">
+              </div>
+
+              <input class="entrada mt-1" type="text" placeholder="Nome do titular do cartão" aria-label="Nome no cartão">
+
+              <div class="metodo-pagamento__bandeiras">
+                <img src="Imagens/visa.svg" alt="Visa" class="bandeira-cartao">
+                <img src="Imagens/mastercard.svg" alt="Mastercard" class="bandeira-cartao">
+                <img src="Imagens/amex.svg" alt="American Express" class="bandeira-cartao">
+              </div>
+
+              <div class="selo-seguranca">
+                <img src="Imagens/cadeado.svg" alt="" class="selo-seguranca__icone">
+                <span>Todas as transações são seguras e criptografadas</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PayPal -->
+          <div class="metodo-pagamento">
+            <div class="metodo-pagamento__cabecalho">
+              <label class="metodo-pagamento__rotulo">
+                <input type="radio" name="metodo-pagamento">
+                <strong>PayPal</strong>
+              </label>
+              <img src="Imagens/paypal.svg" alt="PayPal" class="metodo-pagamento__logo">
+            </div>
+          </div>
+
+          <!-- Apple Pay -->
+          <div class="metodo-pagamento">
+            <div class="metodo-pagamento__cabecalho">
+              <label class="metodo-pagamento__rotulo">
+                <input type="radio" name="metodo-pagamento">
+                <strong>Apple Pay</strong>
+              </label>
+              <img src="Imagens/applepay.svg" alt="Apple Pay" class="metodo-pagamento__logo">
+            </div>
+          </div>
+
+          <button class="botao botao--primario" type="button"><a href="Confirmacao.html" class="botao--primario">FINALIZAR COMPRA</a></button>
+
+          <!-- CONFIRMAÇÃO -->
+          <div class="texto-confirmacao">
+            <p>Ao clicar em "Concluir compra", confirmo que estou ciente e aceito que sou obrigado a pagar pelo meu pedido.</p>
+            <p>Aceito os <a href="#" class="link">Termos e Condições</a> e confirmo que li a <a href="#" class="link">Política de Privacidade</a>.</p>
+          </div>
+
+        </div>
+
+        <!-- BARRA LATERAL -->
+        <aside class="layout__lateral">
+          <div class="cartao-resumo">
+            <h2 class="titulo-secao">Resumo</h2>
+            <div class="cartao-resumo__conteudo">
+              <div class="item-resumo">
+                <span>Itens no carrinho</span><span>R$ 1.199,00</span>
+              </div>
+              <div class="item-resumo">
+                <span>Frete</span><span>R$16,00</span>
+              </div>
+              <div class="item-resumo item-resumo--secundario">
+                <span>Economia aplicada</span><span>-R$240,00</span>
+              </div>
+              <div class="item-resumo item-resumo--secundario">
+                <span>Código de desconto NOQUPS</span><span>-R$240,00</span>
+              </div>
+              <div class="item-resumo item-resumo--total">
+                <span>Total</span><span class="valor-total">R$959,00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cartao mt-1">
+            <div class="caixa-desconto">
+              <h3 class="caixa-desconto__titulo">CÓDIGO DE DESCONTO / VALE-PRESENTE</h3>
+              <div class="grupo-campos">
+                <input class="entrada" type="text" placeholder="NOQUPS" aria-label="Código de desconto">
+                <button class="botao botao--secundario" type="button">Aplicar</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__divisor"></div>
+
+      <div class="rodape__conteudo">
+        <div class="rodape__coluna rodape__coluna--ajuda">
+          <h3 class="rodape__titulo">Precisa de ajuda?</h3>
+          <button class="botao botao--contato">Contato</button>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Atendimento</h3>
+          <ul class="rodape__lista">
+            <li>Devoluções e garantia</li>
+            <li>Pagamentos</li>
+            <li>Frete</li>
+            <li>Termos de serviço</li>
+            <li>Política de privacidade</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Institucional</h3>
+          <ul class="rodape__lista">
+            <li>Sobre nós</li>
+            <li>Marcas</li>
+            <li>Afiliados</li>
+            <li>Investidores</li>
+            <li>Cookies</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna">
+          <h3 class="rodape__titulo">Vale-presente</h3>
+          <ul class="rodape__lista">
+            <li>Comprar</li>
+            <li>Resgatar</li>
+          </ul>
+        </div>
+
+        <div class="rodape__coluna rodape__coluna--localizacao">
+          <div class="seletor-localizacao">
+            <h3 class="rodape__titulo">Localização</h3>
+            <div class="seletor-localizacao__gatilho">
+              <img src="Imagens/Brasil.svg" alt="Bandeira do Brasil" class="bandeira">
+              <span>Brasil</span>
+              <img src="Imagens/setaBandeira.svg" alt="Expandir opções" class="icone">
+            </div>
+          </div>
+        
+          <div class="redes-sociais">
+            <a class="rede-social" href="#"><img src="Imagens/insta.png" alt="Instagram" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_facebook.png" alt="Facebook" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_youtube.png" alt="YouTube" class="icone-rede"></a>
+            <a class="rede-social" href="#"><img src="Imagens/logo_Twitter.png" alt="Twitter" class="icone-rede"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
