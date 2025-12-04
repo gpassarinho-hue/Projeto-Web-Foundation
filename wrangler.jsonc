@@ -1,6 +1,5 @@
 {
   "name": "projeto-web-foundation",
-  "main": "./index.html",
   "compatibility_date": "2025-12-03",
   "assets": {
     "directory": "."
