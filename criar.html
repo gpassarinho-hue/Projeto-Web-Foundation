@@ -170,21 +170,46 @@
               <div class="seletor-localizacao">
                 <h3 class="rodape__titulo">Localização</h3>
                 <div class="seletor-localizacao__gatilho">
-                        <img src="https://flagcdn.com/w40/br.png" alt="Bandeira Brasil" class="bandeira">
-                        <span>Brasil</span>
-                    </div>
+                  <img src="https://flagcdn.com/w40/br.png" alt="Bandeira Brasil" class="bandeira">
+                  <span>Brasil</span>
+                </div>
         
-                    <div class="redes-sociais">
-                        <a class="rede-social" href="#"><img src="Imagens/insta.png" alt="Instagram" class="icone-rede"></a>
-                        <a class="rede-social" href="#"><img src="Imagens/logo_facebook.png" alt="Facebook" class="icone-rede"></a>
-                        <a class="rede-social" href="#"><img src="Imagens/logo_youtube.png" alt="YouTube" class="icone-rede"></a>
-                        <a class="rede-social" href="#"><img src="Imagens/logo_Twitter.png" alt="Twitter" class="icone-rede"></a>
-                    </div>
+                <div class="redes-sociais">
+                  <a class="rede-social" href="#"><img src="Imagens/insta.png" alt="Instagram" class="icone-rede"></a>
+                  <a class="rede-social" href="#"><img src="Imagens/logo_facebook.png" alt="Facebook" class="icone-rede"></a>
+                  <a class="rede-social" href="#"><img src="Imagens/logo_youtube.png" alt="YouTube" class="icone-rede"></a>
+                  <a class="rede-social" href="#"><img src="Imagens/logo_Twitter.png" alt="Twitter" class="icone-rede"></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+
+  <script>
+    // Funcionalidade de mostrar/ocultar senha
+    document.addEventListener('DOMContentLoaded', function() {
+      const toggleButtons = document.querySelectorAll('.criar-conta__mostrar-senha');
+      
+      toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          // Encontrar o input de senha relacionado
+          const passwordInput = this.previousElementSibling;
+          
+          if (passwordInput) {
+            // Alternar tipo do input
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            
+            // Feedback visual no ícone
+            const icon = this.querySelector('img');
+            icon.style.opacity = type === 'text' ? '1' : '0.7';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>

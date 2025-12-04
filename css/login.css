@@ -283,51 +283,59 @@ body {
   position: relative !important;
   width: 100% !important;
   display: block !important;
+  height: 56px !important;
 }
 
-.login__entrada-senha {
+.login__campo-senha .login__entrada {
   padding-right: 60px !important;
   width: 100% !important;
-  height: 56px !important; 
-  line-height: normal !important;
+  height: 100% !important; 
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  padding-left: 1.25rem !important;
+  line-height: 1.5 !important;
   box-sizing: border-box !important;
 }
 
 .login__mostrar-senha {
   position: absolute !important;
-  right: 16px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
+  right: 8px !important;
+  top: 8px !important;
+  bottom: 8px !important;
+  transform: none !important;
   background: none !important;
   border: none !important;
   cursor: pointer !important;
   padding: 0 !important;
-  width: 44px !important;
-  height: 44px !important;
+  width: 40px !important;
+  height: 40px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin: 0 !important;
+  margin: auto 0 !important;
   z-index: 10 !important;
   border-radius: 8px !important;
   transition: var(--transicao) !important;
+  flex-shrink: 0 !important;
 }
 
 .login__mostrar-senha:hover {
-  background: rgba(59, 130, 246, 0.1) !important;
+  background: rgba(59, 130, 246, 0.15) !important;
 }
 
-.login__mostrar-senha img {
-  width: 22px !important;
-  height: 22px !important;
+.login__mostrar-senha .icone-olho {
+  width: 20px !important;
+  height: 20px !important;
   opacity: 0.7 !important;
   transition: var(--transicao) !important;
   filter: invert(1) brightness(0.8) !important;
   display: block !important;
   margin: 0 auto !important;
+  pointer-events: none !important;
+  flex-shrink: 0 !important;
 }
 
-.login__mostrar-senha:hover img {
+.login__mostrar-senha:hover .icone-olho {
   opacity: 1 !important;
   filter: invert(27%) sepia(85%) saturate(2878%) hue-rotate(216deg) brightness(150%) contrast(97%) !important;
 }
