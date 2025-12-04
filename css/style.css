@@ -2502,40 +2502,325 @@ button {
     background: var(--primaria-brilho);
 }
 
-/* Adicione ao final do seu style.css */
-
-/* Fallback para imagens que não carregam */
-.produto-categoria-imagem,
-.produto-relacionado-imagem,
-.item-imagem img,
-.imagem-principal {
-    background-color: var(--fundo-cinza-escuro);
-    background-image: 
-        linear-gradient(45deg, var(--borda) 25%, transparent 25%),
-        linear-gradient(-45deg, var(--borda) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, var(--borda) 75%),
-        linear-gradient(-45deg, transparent 75%, var(--borda) 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    color: var(--texto-secundario);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    position: relative;
+/* Estilos para Produtos Relacionados/Recomendados */
+.produto-relacionados,
+.produtos-recomendados {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
-/* Texto de fallback dentro das imagens */
-.produto-categoria-imagem::after,
-.produto-relacionado-imagem::after,
-.item-imagem img::after {
-    content: "Imagem do produto";
+.produtos-categoria-grid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Ajuste específico para página de produto */
+.produto-detalhes + .secao {
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+}
+
+/* Ajuste específico para página do carrinho */
+.conteudo-carrinho + .secao {
+    margin-top: 4rem;
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
+}
+
+/* ============================================
+   CORREÇÕES PARA SEPARAÇÃO DOS CARDS
+============================================ */
+
+/* 1. Garantir que os cards tenham espaçamento adequado */
+.produtos-categoria-grid {
+    margin-bottom: 40px;
+}
+
+/* 2. Ajustar o card individual */
+.produto-categoria-card {
+    background: var(--fundo-cinza);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao);
+    margin-bottom: 25px; /* Adiciona margem inferior */
+    height: 100%;
+    position: relative;
+    border: 1px solid var(--borda);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Garantir que o link não afete o layout */
+.produto-categoria-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* 4. Ajustar a imagem do card */
+.produto-categoria-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--borda);
+}
+
+/* 5. Ajustar as informações do card */
+.produto-categoria-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 6. Corrigir o grid do Foundation */
+.grid-margin-x {
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+}
+
+.grid-margin-x > .cell {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-bottom: 1.25rem; /* Espaço entre as linhas */
+}
+
+/* 7. Ajustar para produtos relacionados */
+.relacionados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px; /* Aumentar o gap */
+    margin-top: 20px;
+}
+
+.produto-relacionado-card {
+    background: var(--fundo-cinza);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao);
+    border: 1px solid var(--borda);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.produto-relacionado-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--borda);
+}
+
+.produto-relacionado-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 8. Ajustar para cards recomendados no carrinho */
+.recomendados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.produto-recomendado {
+    background: var(--fundo-cinza);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao);
+    border: 1px solid var(--borda);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.produto-recomendado-imagem {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--borda);
+}
+
+.produto-recomendado-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 9. Ajustar para cards de avaliação */
+.avaliacao-destaque {
+    background: var(--fundo-cinza);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-card);
+    height: 100%;
+    border: 1px solid var(--borda);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* 10. Ajustar para cards de categoria */
+.categoria-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--fundo-cinza);
+    border-radius: var(--radius);
+    box-shadow: var(--sombra-card);
+    transition: var(--transicao);
+    border: 1px solid var(--borda);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* 11. Garantir que as células do grid tenham espaçamento */
+.cell {
+    margin-bottom: 1.5rem; /* Espaço entre os cards */
+}
+
+/* 12. Ajustes específicos para diferentes tamanhos de tela */
+
+/* Mobile (até 639px) */
+@media screen and (max-width: 39.9375em) {
+    .produto-categoria-card,
+    .produto-relacionado-card,
+    .produto-recomendado,
+    .categoria-card,
+    .avaliacao-destaque {
+        margin-bottom: 15px;
+    }
+    
+    .grid-margin-x > .cell {
+        margin-bottom: 15px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .relacionados-grid,
+    .recomendados-grid {
+        gap: 15px;
+    }
+}
+
+/* Tablet (640px - 1023px) */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .produto-categoria-card,
+    .produto-relacionado-card,
+    .produto-recomendado,
+    .categoria-card,
+    .avaliacao-destaque {
+        margin-bottom: 20px;
+    }
+    
+    .grid-margin-x > .cell {
+        margin-bottom: 20px;
+    }
+}
+
+/* Desktop (1024px +) */
+@media screen and (min-width: 64em) {
+    .grid-margin-x > .cell {
+        margin-bottom: 30px;
+    }
+    
+    .produto-categoria-card:hover,
+    .produto-relacionado-card:hover,
+    .produto-recomendado:hover,
+    .categoria-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--sombra-forte);
+        border-color: var(--primaria);
+    }
+}
+
+/* 13. Correção para o layout do Foundation */
+.grid-x {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 14. Garantir que os botões dentro dos cards não ultrapassem */
+.botao-adicionar-carrinho-recomendado {
+    margin-top: auto; /* Empurra o botão para baixo */
+}
+
+/* 15. Correção para altura consistente dos cards */
+.produto-categoria-card,
+.produto-relacionado-card,
+.produto-recomendado {
+    min-height: 350px; /* Altura mínima consistente */
+}
+
+/* 16. Ajuste para conteúdo dentro dos cards */
+.produto-categoria-nome,
+.produto-relacionado-nome,
+.produto-recomendado-nome {
+    min-height: 2.6em; /* Garante que títulos com 2 linhas não quebrem o layout */
+}
+
+/* 17. Separador visual entre os cards */
+.produto-categoria-card::after,
+.produto-relacionado-card::after,
+.produto-recomendado-card::after {
+    content: '';
     position: absolute;
-    bottom: 10px;
+    bottom: -12px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background-color: var(--borda);
+    opacity: 0.3;
+}
+
+/* 18. Correção para o badge não sobrepor conteúdo */
+.produto-categoria-badge,
+.produto-relacionado-badge,
+.produto-recomendado-badge {
+    position: absolute;
+    top: 10px;
     left: 10px;
-    background-color: rgba(0,0,0,0.7);
+    background-color: var(--primaria);
     color: white;
     padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* 19. Ajuste para o preço não quebrar linha */
+.produto-categoria-preco,
+.produto-relacionado-preco,
+.produto-recomendado-preco {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap; /* Não deixa quebrar linha */
+    white-space: nowrap;
+}
+
+/* 20. Garantir que o container principal tenha padding */
+main.grid-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
 }
