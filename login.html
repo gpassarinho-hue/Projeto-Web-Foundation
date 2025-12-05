@@ -15,7 +15,7 @@
           <span class="barra-superior__empresa">TECNOMAX</span>
           <div class="barra-superior__voltar">
             <img src="imagens/setaEsquerda.svg" alt="Seta para voltar" class="icone">
-            <a class="barra-superior__link" href="home.html">Voltar à loja</a>
+            <a class="barra-superior__link" href="index.html">Voltar à loja</a>
           </div>
         </div>
 
@@ -153,25 +153,5 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Funcionalidade de mostrar/ocultar senha
-    document.addEventListener('DOMContentLoaded', function() {
-      const togglePassword = document.querySelector('.login__mostrar-senha');
-      const passwordInput = document.getElementById('senha');
-      
-      if (togglePassword && passwordInput) {
-        togglePassword.addEventListener('click', function() {
-          // Alternar tipo do input
-          const type = passwordInput.type === 'password' ? 'text' : 'password';
-          passwordInput.type = type;
-          
-          // Opcional: trocar ícone (se tiver dois ícones)
-          const icon = this.querySelector('img');
-          icon.style.opacity = type === 'text' ? '1' : '0.7';
-        });
-      }
-    });
-  </script>
 </body>
 </html>
